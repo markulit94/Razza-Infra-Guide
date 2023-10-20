@@ -1,3 +1,8 @@
+---
+title: Infrastructure guides and how-tos/step-by-step
+layout: default
+---
+
 # Infrastructure guides and how-tos/step-by-step
 
 ## Restricting IP Addresses from wp-login and whitelisting certain IPs
