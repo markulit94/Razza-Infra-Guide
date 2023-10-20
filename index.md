@@ -199,7 +199,29 @@ layout: default
     rm /home/bitnami/mysqldump2023.sql
     ```
 
-17. Update DNS records to point to the new server public IP.
+17. Generate Let’s Encrypt HTTPS certificate:
+
+    ```
+    sudo /opt/bitnami/bncert-tool
+
+    Domain List []: domainname.com www.domainname.com
+    Enable HTTP to HTTPS redirection (Y\n): Y
+    Enable non-www to www redirection (Y\n): Y
+    Enable www to non-www redirection (y\N): N
+
+    Do you agree to these changes? [Y\n]:
+
+    Next prompt will ask for the email address, add the site's primary email address or support
+    
+    Do you agree to the Let's Encrypt Subscriber Agreement? [Y\n]: Y
+
+    Wait for the tool to finish
+    It should show success once done.
+
+    Confirm by going to the site, and clicking the padlock icon beside the URL to make sure that you have the certificate you created, date created and validity
+    ```
+
+18. Update DNS records to point to the new server public IP.
 
 
 ## Changing SSH Port
