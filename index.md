@@ -225,16 +225,16 @@ layout: default
 
 19. If server/instance is connected to EC2 and it is under Elastic IP, follow [Transferring existing Elastic IP to another instance](#transferring-existing-elastic-ip-to-another-instance)
 
-# Transferring existing Elastic IP to another instance
+## Transferring existing Elastic IP to another instance
 
 1. Open the Amazon EC2 console, then select Elastic IPs.
 2. Choose the Elastic IP address that you want to transfer.
 3. Verify the Association ID and Associated instance ID to confirm which instance the Elastic IP address is currently associated with.
-![associate-disassociate](/_images/Transferring-Elastic-Ip/association-ids.jpg)
+![associate-disassociate](images/Transferring-Elastic-Ip/association-ids.jpg)
 4. Select Actions, Disassociate Elastic IP address.
 5. Select Disassociate.
 6. Select the Elastic IP address again, and then select Actions, Associate Elastic IP address.
-![associate-disassociate](/_images/Transferring-Elastic-Ip/associate-disassociate.bmp)
+![associate-disassociate](images/Transferring-Elastic-Ip/associate-disassociate.bmp)
 7. Select Instance and then search for the Instance ID of the instance that you want to associate the Elastic IP address with.
 
 
