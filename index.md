@@ -223,6 +223,24 @@ layout: default
 
 18. Update DNS records to point to the new server public IP.
 
+19. If server/instance is connected to EC2 and it is under Elastic IP, follow [Transferring existing Elastic IP to another instance](#transferring-existing-elastic-ip-to-another-instance)
+
+# Transferring existing Elastic IP to another instance
+
+1. Open the Amazon EC2 console, then select Elastic IPs.
+2. Choose the Elastic IP address that you want to transfer.
+3. Verify the Association ID and Associated instance ID to confirm which instance the Elastic IP address is currently associated with.
+![associate-disassociate](/_images/Transferring-Elastic-Ip/association-ids.jpg)
+4. Select Actions, Disassociate Elastic IP address.
+5. Select Disassociate.
+6. Select the Elastic IP address again, and then select Actions, Associate Elastic IP address.
+![associate-disassociate](/_images/Transferring-Elastic-Ip/associate-disassociate.bmp)
+7. Select Instance and then search for the Instance ID of the instance that you want to associate the Elastic IP address with.
+
+
+
+
+
 
 ## Changing SSH Port
  *applicable to Amazon EC2 and Wordpress Bitnami*
@@ -253,3 +271,4 @@ layout: default
     tcp6       0      0 :::5437                 :::*                    LISTEN      5134/sshd  
     ```
 8. DO not disconnect your current connection yet, and try another connection by testing your new port number, if it works, your old port number shouldn't work. If it doesn't work, check your firewall or your security group and make sure the port number is exposed on either the firewall or security group in EC2
+
