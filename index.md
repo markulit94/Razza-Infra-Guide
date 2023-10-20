@@ -32,7 +32,9 @@ location ~ \.php$ {
 }
 }
 ```
+
 3. When pasted, should look like this:
+
 ```
 index index.html index.htm index.php;
 #Restrict logins from unknown IPs in wp-admin and wp-login
