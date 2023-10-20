@@ -67,13 +67,14 @@ location ~ \.php$ {
 
 }
 ```
+
 4. restart nginx: sudo /opt/bitnami/ctlscript.sh restart nginx
 
 *source fix from [How to restrict WordPress Admin Access by IP Address with NGINX](https://www.cloudpanel.io/tutorial/how-to-restrict-wordpress-admin-access-by-ip-address-with-nginx/)*
 
 ## Upgrading Bitnami's PHP / Stack
 
-1. Watch or follow the steps in the link provided: [Video Link](https://www.youtube.com/watch?reload=9&v=NzjyWlx9h80&t=554s) / [Step-by-step Link](https://www.elasticourse.com/how-to-upgrade-bitnami-wordpress-stack/)
+> Watch or follow the steps in the link provided: [Video Link](https://www.youtube.com/watch?reload=9&v=NzjyWlx9h80&t=554s) / [Step-by-step Link](https://www.elasticourse.com/how-to-upgrade-bitnami-wordpress-stack/)
 
 *Link provided for the steps should be the same here*
 1. If you are using extended firewall in your application such as Wordfence extended protection, it’s recommended to disable this option temporarily.
@@ -81,6 +82,7 @@ location ~ \.php$ {
 2. SSH to the old bitnami server using an SSH client.
 
 3. Stop all services and start mysql or mariadb to do the database backup:
+
 ```
 sudo /opt/bitnami/ctlscript.sh stop
 sudo /opt/bitnami/ctlscript.sh start mariadb
