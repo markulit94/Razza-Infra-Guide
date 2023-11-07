@@ -15,10 +15,10 @@ layout: default
 
     location ~ /(wp-login|wp-admin/) {
         # Allow IPs from
-        # Mark A
-        allow 136.158.41.4;
-        # Franco M
-        # allow 180.190.117.42;
+        # Lead Developer
+        allow 111.111.22.22;
+        # Senior Developer
+        allow 111.111.111.142;
         deny all;
 
     location ~ \.php$ {
@@ -40,10 +40,10 @@ layout: default
     #Restrict logins from unknown IPs in wp-admin and wp-login
     location ~ /(wp-login|wp-admin/) {
         # Allow IPs from
-        # Mark A
-        allow 136.158.41.4;
-        # Franco M
-        # allow 180.190.117.42;
+        # Lead Developer
+        allow 111.111.22.22;
+        # Senior Developer
+         allow 111.111.111.142;
         deny all;
 
     location ~ \.php$ {
@@ -173,8 +173,8 @@ layout: default
 
 
     /** Database password */
-    - define( 'DB_PASSWORD', 'qom2slpozozajid2sufochospuca48efiphlf4splfapljustlb4mlw8that1hiq' );
-    + define( 'DB_PASSWORD', 'r7k80f656c73e22901f8e2e4a25e767d99da60164865fe9f8e2e4a25e76sdfwf' );
+    - define( 'DB_PASSWORD', 'qom2slpozozajid2sufochxxxx48efaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1hiq' );
+    + define( 'DB_PASSWORD', 'r7kxxxxxxxxxxxxxxxxss25e767d99da60aaaaaaaaaaaaaf8e2e4a25e76sdfwf' );
     ```
 15. Fix permissions for files and folders
     ```
