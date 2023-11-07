@@ -272,3 +272,52 @@ layout: default
     ```
 8. DO not disconnect your current connection yet, and try another connection by testing your new port number, if it works, your old port number shouldn't work. If it doesn't work, check your firewall or your security group and make sure the port number is exposed on either the firewall or security group in EC2
 
+
+## Backing up Wordpress Site/public_html folder via All-in-One Migration unlimited paid plugin
+1. If All-in-one plugin is not installed yet, download the extension plugin and the plugin in the Razza Tech Drive:
+    - Go to Razza Shared Drive in Google drive, and go to folders Softwares > Plugins.
+    - Install by going to Wordpress Plugins > Add New
+    - Proceed installing the 2 plugins *(.zip)*
+
+2. Click All-in-One WP Migration
+3. Click Export to > Click File
+4. Wait for it to finish
+
+## Restoring Wordpress Site/public_html folder via All-in-One Migration unlimited paid plugin
+1. Get backup-file.wpress
+
+2. Click All-in-One WP Migration
+3. Click Import > Click File
+4. Wait for import to finish
+5. Click 'yes', by clicking yes it means you are agreeing that previous site will be lost and be replaced by the new site/backup that is imported.
+
+## Adding storage to Amazon EC2 instance
+1. Go to the instance that needs storage upgrade
+2. Click Storage below
+3. Click Volume ID
+4. Select Volume
+![associate-disassociate](images/Adding-EC2-Storage/aws-ec2-storage-upgrade.jpg)
+5. Select Actions dropdown
+6. Click Modify Volume
+![associate-disassociate](images/Adding-EC2-Storage/aws-ec2-storage-upgrade-modify.jpg)
+7. Select an appropriate volume required for your server/instance
+8. Make sure you get to restart/reboot the instance by right clicking in your instance then click Reboot Instance to refresh the storage previously assigned
+9. To check current storage, if storage is updated, go to your SSH and type 'df -h'
+    - df shows bytes
+    - adding -h parameter makes it human readable
+
+## Adding Google Analytics, Google Search Console to your new Wordpress Site
+1. Install Google Site Kit and follow the on-screen prompt to activate Google Analytics, Google Search Console.
+2. Make sure you are an admin on the Google Analytics you are adding, lacking authorization will restrict you from having Google Analytics on your website, or you can add instead your own Google Analytics (not recommended on Razza Projects)
+
+## Adding Google Tag
+3. Add Google Tag by going to https://tagmanager.google.com/#/home
+4. Click on the Account's elipsis
+5. Click on 'Create Container'
+![associate-disassociate](images/Adding-Google-Analytics/google-tag-add.jpg)
+6. Follow and fill out required fields
+7. 2 ways, add your code into Elementor or directly to wordpress file
+8. Adding to Wordpress file:
+    - Go to your SFTP/SSH and modify header.php
+    - Paste Google Tag Header code provided upon finishing submission
+    - Paste Google Tag Body code provided upon finishing submission
