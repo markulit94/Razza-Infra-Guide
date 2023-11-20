@@ -70,6 +70,19 @@ layout: default
 
 4. restart nginx: sudo /opt/bitnami/ctlscript.sh restart nginx
 
+5. If Wordpress site is under apache, not nginx, add these codes to your "/opt/bitnami/apache/conf/bitnami/php-fpm.conf":
+
+    ```
+    <Directory "/opt/bitnami/wordpress/wp-admin">
+                    Require all denied
+                    Require ip 1.2.3.4
+    </Directory>
+    <Directory "/opt/bitnami/wordpress/wp-login.php">
+                    Require all denied
+                    Require ip 1.2.3.4
+    </Directory>
+    ```
+
 *source fix from [How to restrict WordPress Admin Access by IP Address with NGINX](https://www.cloudpanel.io/tutorial/how-to-restrict-wordpress-admin-access-by-ip-address-with-nginx/)*
 
 ## Upgrading Bitnami's PHP / Stack
